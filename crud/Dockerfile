@@ -15,6 +15,6 @@ COPY requirements.txt requirements.txt
 
 RUN python -m pip install -r requirements.txt
 
-# EXECUTANDO O SERVIDOR UVICORN
+# EXECUTANDO OS TESTES UNITÁRIOS
 
 CMD python -m pytest
