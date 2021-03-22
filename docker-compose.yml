@@ -1,0 +1,24 @@
+services:
+
+  crud:
+    build: "crud"
+    container_name: "crud_mongo_pymongo"
+    volumes:
+      - "./crud:/crud"
+    tty: true
+    links:
+      - db
+    networks:
+      - backend
+
+  db:
+    build: "db"
+    container_name: "crud_mongo_db"
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: "bridge"

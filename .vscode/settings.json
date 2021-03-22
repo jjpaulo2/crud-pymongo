@@ -1,0 +1,13 @@
+{
+    "python.pythonPath": "/Users/c90383a/OneDrive - EXPERIAN SERVICES CORP/github/teste-mongo-python/venv/bin/python3.9",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true
+}
