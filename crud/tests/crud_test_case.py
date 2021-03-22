@@ -1,8 +1,8 @@
 from json import load as json_load
 
-from pymongo import MongoClient
 from unittest import TestCase
 
+from crud.connection import CRUDMongoClient
 from crud.crud_clientes import ClientesCRUD
 
 
@@ -15,10 +15,9 @@ class CRUDTestCase(TestCase):
         """
         Método executado antes dos testes.
         """
-        HOSTNAME = "crud_mongo_db"
-        PORT = 27017
-
-        self.mongo_client = MongoClient(HOSTNAME, PORT)
+        self.mongo_client = CRUDMongoClient()
+        self.mongo_client = self.mongo_client.client
+        
         self.clientes_crud = ClientesCRUD(self.mongo_client)
 
         # Lendo arquivo `tests/data.json` para obter

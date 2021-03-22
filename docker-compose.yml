@@ -8,6 +8,9 @@ services:
     tty: true
     links:
       - db
+    environment: 
+      - MONGODB_HOST=crud_mongo_db
+      - MONGODB_PORT=27017
     networks:
       - backend
 
